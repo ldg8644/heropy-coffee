@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+main{padding-top: 120px;}
+
+.badges{
+    width: 130px;
+    position: fixed;
+    right: 5px;top: 125px;
+    z-index: 90;
+
+}
+
+.badges img{
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+}
+/* 비주얼 영역서식 */
+.visual{
+    background-image:url(../images/visual_bg.jpg);
+}
+.visual>h2{display: none;}
+.visual .inner{
+    width: 1100px;
+    height: 646px;
+
+    position: relative;/*자식요소의 기준*/
+}
+
+.title, .cup1, .cup1_txt, .cup2, .cup2_txt, .spoon{
+    position: absolute;
+}
+.title{
+    top: 40px;
+    left: -10px;
+
+}
+.cup1{bottom: 0px; right: -47px;}
+.cup1_txt{top: 40px;right: 60px;}
+.cup2{bottom: 0px; right: 162px;}
+.cup2_txt{top: 186px; right: 412px;}
+.spoon{bottom: 0px; left: 275px;}
+
+.detail_btn{
+    width: 130px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #592b18;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    transition: 0.4s;
+    color: #592b18;
+    transform: translateX(135px);
+}
+.detail_btn:hover{
+color: #ffff;
+background: #592b18;
+}
+.fadein{
+    opacity: 0;
+}
+
+/* 공지사항 서식 */
+.notice{
+    height: 62px;
+    background: rgb(51,51,51);
+background: linear-gradient(90deg, rgba(51,51,51,1) 61.5%, rgba(246,245,239,1) 61.5%);
+}
+.n_inner{
+    width: 1100px;
+    position: relative;
+    margin: 0px auto;
+display: flex;
+}
+.n_inner h2{
+    width: 90px;
+    line-height: 62px;
+    font-size: 16px;
+}
+.n_inner__left{
+   width: 70%;
+display: flex;
+
+   overflow: hidden;
+  
+}
+.n_inner__left h2{color: #ffff;
+
+margin-right: 20px;
+width: 100px;line-height: 58px;
+padding: 0px 10px 0px 20px;
+}
+/*기호버튼 서식*/
+.n_inner__left i{color: #fff;
+font-size: 30px;
+padding: 15px 20px 0px 0px;
+}
+.n_inner__right{width: 30%;
+
+display: flex;
+line-height: 60px;
+justify-content: flex-end;
+align-items: center;  /* 수평맞추기 */
+
+
+}
+.n_inner__right h2{
+    width: 120px;
+    color: #333;
+}
+.n_inner__right i{
+    font-size: 30px;
+  
+}
+
+.snotice {
+    width: 100%;
+    height: 62px;
+
+  }
+
+.snotice .swiper-slide {
+font-size: 18px;
+
+   
+  }
+
+.snotice .swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+  }
+  .snotice .swiper-slide >a{
+    color: #fff; font-size: 12px;
+    display: block;
+    padding-top: 25px;
+  }
+
+  /* 프로모션 서식 */
+
+  .promotion{
+    display: flex;
+justify-content: center;
+background: #f6f5ef;
+position: relative;
+overflow: hidden;
+height: 663px;
+}
+  .proSlide{
+    width: calc(819px * 3 + 10px * 2);/**띄어쓰기 필수;*/
+    height: 553px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .proSlide h2{
+display: none;
+  }
+  .proSlide .swiper-slide{
+    text-align: center;
+  }
+  .proSlide .swiper{margin-left: auto;
+margin-right: auto;
+position: relative;
+overflow: hidden;
+}
+
+  .proSlide .swiper-wrapper{
+    display: flex;
+
+  }
+  .proSlide .swiper-pagination{
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .proSlide .swiper-button-prev,  .proSlide .swiper-button-next{
+  
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    top: 270px; 
+    text-align: center;
+    padding: 7px;
+    box-sizing: border-box;
+    color: #333;
+  }
+
+  .proSlide .swiper-button-prev{
+   
+    left: 50%;
+   margin-left: -480px;
+  }
+  
+  .proSlide .swiper-button-next{
+  
+    right: 50%;
+    margin-right: -480px;
+  }
+  .promotion .swiper-button-next:hover,
+  .promotion .swiper-button-prev:hover{background-color: #333;
+color: #fff;}
+
+.promotion .swiper-button-next::after,
+.promotion .swiper-button-prev::after{
+    display: none;
+}
+  .promotion .swiper-slide{
+    position: relative;
+    opacity: .5;
+    transition: opacity 1s;
+
+  }
+  .promotion .swiper-slide-active{
+    opacity: 1;
+  }
+
+  .promotion .swiper-slide .btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    transition: .4s;
+    height: 40px;
+    font-weight: bold;
+  }
+  .promotion .swiper-slide .btn:hover{
+    background-color: #333;
+    color: #fff;
+  }
+  .promotion .swiper-pagination{
+    bottom: 40px !important;
+    z-index: 1;
+  }
+  .promotion .swiper-pagination .swiper-pagination-bullet{
+    background-color: transparent;
+    background-image: url(../images/promotion_slide_pager.png);
+    width: 13px;
+    height: 12px;
+    margin-right: 6px;
+  }
+  .promotion .swiper-pagination .swiper-pagination-bullet:last-child{
+    margin-right: 0;
+  }
+  .promotion .swiper-pagination .swiper-pagination-bullet-active{
+    background-image: url(../images/promotion_slide_pager_on.png);
+
+  }

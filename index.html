@@ -35,12 +35,24 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
     <!--레이아웃 (헤더, 푸터)-->
     <link rel="stylesheet" href="./css/layout.css" type="text/css">
+    <!-- 메인영역 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
     <!-- 공통서식 -->
     <link rel="stylesheet" href="./css/base.css" type="text/css">
     <!-- 메인콘텐츠 -->
     <link rel="stylesheet" href="./css/main.css" type="text/css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
     <!-- css3속성사용시 자동으로 접두사 붙여주는 스크립트 소스 -->
     <script src="./script/prefixfree.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+    <script src="./script/main.js" defer></script>
     <title>커피전문점 레이아웃</title>
 
 
@@ -365,9 +377,82 @@
     <!-- 메인영역 시작 -->
     <main>
 
-        <section class="slide"><h2>제목</h2></section>
-        <section class="notice"><h2>제목</h2></section>
-        <section class="event"><h2>제목</h2></section>
+        <section class="visual">
+            
+            <h2>메인 비주얼이미지</h2>
+        <div class="inner">
+            <div class="title fadein">
+            <img src="./images/visual_title.png" alt="">
+            <a href="#" title="자세히보기" class="detail_btn">자세히보기</a>
+        </div>
+    <div class="fadein">
+        <img src="./images/visual_cup1.png" alt="" class="cup1">
+        <img src="./images/visual_cup1_text.png" alt="" class="cup1_txt">
+    </div>
+    
+    <div class="fadein">
+        <img src="./images/visual_cup2.png" alt="" class="cup2">
+        <img src="./images/visual_cup2_text.png" alt="" class="cup2_txt">
+    </div>
+
+    <div class="fadein">
+        <img src="./images/visual_spoon.png" alt="" class="spoon">
+    </div>
+    </div>
+</section>
+        <section class="notice">
+            <div class="n_inner">
+                <div class="n_inner__left">
+                    <h2>공지사항</h2>
+                     <!-- Swiper -->
+    <div class="swiper snotice">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="javascript:void(0)">
+            크리스마스 & 연말연시 매장 영업시간 별경안내
+            </a>
+        </div>
+          <div class="swiper-slide"><a href="javascript:void(0)">[당첨자 발표] 커피영수증 이벤트</a></div>
+          <div class="swiper-slide"> <a href="javascript:void(0)">애플리케이션 버전 업데이트 안내</a></div>
+          <div class="swiper-slide"><a href="javascript:void(0)">[당첨자 발표] 전자영수증 이벤트</a></div>
+
+        </div>
+      </div>
+      <i class="material-icons">add_circle</i>
+                </div>
+                <div class="n_inner__right">
+                    <h2>커피 프로모션</h2>
+                    <i class="material-icons">upload</i>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로모션 -->
+        
+
+        
+        <section class="promotion">
+            <h2>프로모션</h2>
+             <!-- Swiper -->
+    <div class="swiper proSlide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/promotion_slide1.jpg" alt=""><a href="javascript:void(0)" title="프로모션1" class="btn">자세히보기</a></div>
+          <div class="swiper-slide"><img src="./images/promotion_slide2.jpg" alt=""><a href="javascript:void(0)" title="프로모션2" class="btn">자세히보기</a></div>
+          <div class="swiper-slide"><img src="./images/promotion_slide3.jpg" alt=""><a href="javascript:void(0)" title="프로모션3" class="btn">자세히보기</a></div>
+          <div class="swiper-slide"><img src="./images/promotion_slide4.jpg" alt=""><a href="javascript:void(0)" title="프로모션4" class="btn">자세히보기</a></div>
+          <div class="swiper-slide"><img src="./images/promotion_slide5.jpg" alt=""><a href="javascript:void(0)" title="프로모션5" class="btn">자세히보기</a></div>
+        </div>
+        
+        <div class="swiper-button-prev">  <span class="material-icons">arrow_back</span></div>
+      
+        <div class="swiper-button-next">        <span class="material-icons">arrow_forward</span></div>
+       
+
+      </div>
+      <div class="swiper-pagination"></div>
+        </section>
+
+
         <section class="rewards"><h2>제목</h2></section>
         <section class="video"><h2>제목</h2></section>
         <section class="pro_01"><h2>제목</h2></section>
@@ -376,6 +461,16 @@
         <section class="favorite02"><h2>제목</h2></section>
         <section class="store"><h2>제목</h2></section>
 
+        <!-- 배너 배지 -->
+        <aside class="badges">
+            <a href="#" title="디저트">
+                <img src="./images/badge1.jpg" alt="">
+            </a>
+            <br>
+            <a href="#" title="골드 회원 가입">
+                <img src="./images/badge2.jpg" alt="">
+            </a>
+        </aside>
 
 
 
@@ -384,5 +479,37 @@
     <footer>
 
     </footer>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".snotice", {
+         direction: "vertical",
+         autoplay: true,
+         loop:true,
+       });
+
+       var swiper = new Swiper(".proSlide",{ //객체생성
+        slidesPerView:3,
+        spaceBetween:10,
+        centeredSlides:true,//1번 슬라이드가 중앙에 배치
+        pagination:{
+            el:".swiper-pagination",
+            clickable:true,
+        },
+        loop:true,
+        autoplay:true,
+         autoplay:{
+            delay:4000,
+            disableOnInteraction:false,
+         },
+         navigation:{
+            nextEl:".swiper-button-next",
+            prevEl:".swiper-button-prev",
+         },
+       }); 
+     </script>
 </body>
 </html>
