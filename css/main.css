@@ -99,7 +99,7 @@ padding: 15px 20px 0px 0px;
 .n_inner__right{width: 30%;
 
 display: flex;
-line-height: 60px;
+
 justify-content: flex-end;
 align-items: center;  /* 수평맞추기 */
 
@@ -107,7 +107,7 @@ align-items: center;  /* 수평맞추기 */
 }
 .n_inner__right h2{
     width: 120px;
-    color: #333;
+    color: #333;line-height: 60px;
 }
 .n_inner__right i{
     font-size: 30px;
@@ -147,7 +147,16 @@ background: #f6f5ef;
 position: relative;
 overflow: hidden;
 height: 663px;
+transition: 0.4s;
+
 }
+
+/* 버튼클릭시 프로모션박스에 적용할 서식 */
+.hide{
+  height: 0px !important;
+}
+
+
   .proSlide{
     width: calc(819px * 3 + 10px * 2);/**띄어쓰기 필수;*/
     height: 553px;
@@ -223,19 +232,7 @@ color: #fff;}
     left: 0;
     right: 0;
     margin: auto;
-    width: 130px;
-    padding: 10px;
-    border: 2px solid #333;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-    transition: .4s;
-    height: 40px;
-    font-weight: bold;
+   
   }
   .promotion .swiper-slide .btn:hover{
     background-color: #333;
@@ -259,3 +256,283 @@ color: #fff;}
     background-image: url(../images/promotion_slide_pager_on.png);
 
   }
+
+  /* 리워드 */
+  .reward{
+    height: 241px;
+    background: rgb(39,39,39);
+background: linear-gradient(90deg, rgba(39,39,39,1) 50%, rgba(213,199,152,1) 50%);
+  }
+  .reward_inner{
+    background-image: url(../images/rewards.jpg);
+    width: 1100px;
+    height: 241px;
+    margin: 0 auto;
+position: relative;
+  }
+  .btn_group{
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    width: 290px;
+
+  } 
+  .btn{
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    transition: .4s;
+    height: 40px;
+    font-weight: bold;
+  }
+
+
+.btn:hover{
+    background-color: #333;
+    color: #fff;
+  }
+
+  .gift{
+    width: 250px;
+
+  }
+
+  .btn_join{
+    background-color: #333;
+    color: #fff;
+  }
+
+  .btn_join:hover{
+    color: #333;
+    background-color: transparent;
+  }
+
+
+  .btn_join, .btn_login{
+    display: inline-block !important;
+    width: 123px;
+    height: 45px;
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+
+  /*영상콘텐츠*/
+  .movie{
+    width: 100%;
+    height: 700px;
+    background-color: #333;
+  
+    position: relative;
+  }
+.movie .m_inner{
+  width: 1100px;height: 700px;
+  margin: 0px auto;
+
+  position: relative;
+  z-index: 12;
+}
+.movie .m_inner img{
+  position: absolute;
+}
+.m_img1{left: -60px; top: 30px;
+  animation-name:m_img1;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+
+}
+
+@keyframes m_img1{
+  0%{top: 0px;}
+  50%{top:15px;}
+  100%{top: 0px;}
+}
+.m_img2{left: 80px;top: 360px;
+  animation: m_img2 infinite 5.5s;
+  overflow: hidden;
+}
+@keyframes m_img2{
+  0%{top: 360px;}
+  50%{top: 380px;}
+  100%{top:360px;}
+}
+.m_img3{right: 0px ;bottom: -60px;
+
+animation: m_img3 infinite 6s;
+}
+@keyframes m_img3{
+  0%{bottom: -60px;}
+  50%{bottom: -90px;}
+  100%{bottom: -60px;}
+}
+
+.youtube{
+  width: 1920px;
+  height:700px;
+  position: absolute;top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+.youtube video{
+  width: 100%;
+  height: 100%;
+}
+
+.cover{
+  position: absolute;
+  top: 0px;left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/video_cover_pattern.png);
+  z-index: 11;
+}
+
+.season-product{
+  background-image: url(../images/season_product_bg.jpg);
+  height: 400px;
+
+}
+.season-product h2{
+  display: none;
+}
+.inner{
+  width: 1100px;
+  margin: 0px auto;
+  position: relative;                         
+}
+.season-product .coffee01{
+  position: absolute;
+}
+.season-product .txt_group{
+position: absolute;
+top: 110px;
+right: 100px;
+width: 480px;
+text-align: left;
+}
+
+.season-product .c_title{
+  margin-bottom: 10px;
+
+
+}
+.season-product .description{
+  margin-bottom: 15px;
+
+}
+.season-product .txtgroup .btn{
+  transform: none;
+}
+.reserve-coffee{
+  background-image: url(../images/reserve_bg.jpg);
+}
+.reserve-coffee .inner{
+  height: 400px;
+}
+
+.reserve-coffee .reserve-logo{
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+
+.reserve-coffee .txt-group{
+  position: absolute;
+  top: 124px;
+  left: 208px;
+
+}
+.reserve-coffee .product{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.reserve-coffee .btn{
+  border: 3px solid #946551;
+  color: #9b6750;
+}
+/* pickyourfavorite */
+.pick-your-favorite{
+  height: 706px;
+  background-image: url(../images/favorite_bg.jpg);
+}
+.pick-your-favorite .inner{
+  padding: 110px 0;
+}
+.pick-your-favorite .txt-group{
+  width: 362px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+}
+.pick-your-favorite .txt-group .c_title{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .txt-group .description{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .btn{
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* reservestore */
+.reserve-store{
+  background-image: url(../images/reserve_store_bg.jpg);
+
+}
+.reserve-store .inner{
+  height: 600px;
+}
+/* findstore */
+.find-store{
+  background-image: url(../images/find_store_bg.jpg);
+}
+.find-store .inner{
+  height: 400px;
+}
+.find-store .texture1{
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find-store .texture2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture1{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .5);
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+
+.find-store .picture2{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0 , 0, .5);
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+.find-store .txt-group{
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find-store .txt-group .c_title{
+  margin-bottom: 20px;
+}
+.find-store .txt-group .description{
+  margin-bottom: 20px;
+}

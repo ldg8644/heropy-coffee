@@ -170,15 +170,7 @@ padding: 10px 20px 34px 20px;}
     height: 700px;
     background-color: #ccc;
 } */
-.notice{height: 63px;background-color: #888;}
-.event{height: 658px;background-color: #ccc;}
-.rewards{height: 245px; background-color: #888;}
-.video{height: 700px; background: #ccc;}
-.pro_01{height: 400px;background-color: #888;}
-.pro_02{height: 400px;background-color: #ccc;}
-.favorite01{height: 700px;background-color: #888;}
-.favorite02{height: 600px;background-color: #ccc;}
-.store{height: 400px;background-color: #888;}
+
 footer{background-color: #333;
 height: 470px;
 width: 100%;}
