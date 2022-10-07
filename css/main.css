@@ -608,10 +608,10 @@ text-align: left;
   opacity: .3;
 }
 .awards .swiper-button-prev{
-  left: -100px;
+  left: -100px; top: 60px;
 }
 .awards .swiper-button-next{
-  right: -100px;
+  right: -100px;top: 60px;
 }
 .awards .swiper-button-next:hover,
 .awards .swiper-button-prev:hover{
