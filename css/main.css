@@ -595,7 +595,8 @@ text-align: left;
   background-color: #272727;
 }
 .awards .inner{
-  padding: 40px 0;
+  padding: 30px 0;
+  height: 60px;
 }
 .awards .swiper-button-next,
 .awards .swiper-button-prev{
